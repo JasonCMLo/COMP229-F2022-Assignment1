@@ -1,3 +1,16 @@
+/*
+
+File name: Styles.css
+Student name: Jason Lo
+Student ID: 301234232
+Date: October 6th, 2022
+
+*/
+
+// This file consolidates the various components of the website into a functioning express app.
+// The key elements of this file is to join the routes that have been established in routes.server.js
+// with the actual views that have been created in EJS
+
 // Import third party Modules
 
 import express from "express";
@@ -26,13 +39,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../public")));
-// app.use(
-//   session({
-//     secret: Secret,
-//     saveUninitialized: false,
-//     resave: false,
-//   })
-// );
 
 // Use Routes
 app.use("/", router);

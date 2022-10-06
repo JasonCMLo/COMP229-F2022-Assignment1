@@ -17,9 +17,15 @@
   </head>
 
   <body>
+
+    <!-- There are three partials in each page:
+     1) Header : This has the navbar that is shared across all pages
+     2) Page Content: This is dynamically managed based on the page variable that is being passed to the EJS template. It will render based on the variable defined in the controllers file
+     3) Footer : This has the footer content that is shared across all pages
+    -->
+    
     <%- include("components/header.ejs") %> 
-    
-    
+        
     <%- include("content/" + page + ".ejs") %>
 
     <%- include("components/footer") %>
